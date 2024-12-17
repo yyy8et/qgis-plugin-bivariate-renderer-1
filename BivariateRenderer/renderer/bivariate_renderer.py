@@ -16,21 +16,56 @@ from qgis.core import (
 from qgis.PyQt.QtGui import QColor
 from qgis.PyQt.QtXml import QDomDocument, QDomElement
 
+<<<<<<< Updated upstream
 from BivariateRenderer.colorramps.bivariate_color_ramp import (
     BivariateColorRamp,
     BivariateColorRampCyanViolet,
     BivariateColorRampGradient,
     BivariateColorRampManual,
 )
+=======
+from qgis.core import (QgsFeatureRenderer, QgsClassificationRange, QgsFeature, QgsColorRamp,
+                       QgsFillSymbol, QgsSymbolLayerUtils, QgsVectorLayer, QgsClassificationMethod,
+<<<<<<< HEAD
+                       QgsClassificationEqualInterval, QgsLegendSymbolItem)
+=======
+                       QgsClassificationEqualInterval)
+>>>>>>> 83183fb (add classification_method directly)
+>>>>>>> Stashed changes
 
 from ..text_constants import Texts
 
 
 class BivariateRenderer(QgsFeatureRenderer):
+<<<<<<< Updated upstream
+=======
+
+<<<<<<< HEAD
+=======
+    number_classes: int
+    classification_method_name: str
+    color_ramp_1: QgsColorRamp
+    color_ramp_2: QgsColorRamp
+    field_name_1: str
+    field_name_2: str
+    field_1_classes: List[QgsClassificationRange]
+    field_2_classes: List[QgsClassificationRange]
+
+    color_mixing_method: ColorMixingMethod
+    classification_method: QgsClassificationMethod
+
+>>>>>>> 83183fb (add classification_method directly)
+>>>>>>> Stashed changes
     def __init__(self, syms=None):
         super().__init__(Texts.bivariate_renderer_short_name)
 
         self.classification_method = QgsClassificationEqualInterval()
+<<<<<<< HEAD
+=======
+
+        self.field_name_1 = None
+        self.field_name_2 = None
+>>>>>>> 83183fb (add classification_method directly)
 
         self.bivariate_color_ramp: BivariateColorRamp = BivariateColorRampCyanViolet()
 
