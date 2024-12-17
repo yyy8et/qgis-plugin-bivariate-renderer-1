@@ -9,7 +9,7 @@
             "type": "shell",
             "command": "pytest tests --cov=BivariateRenderer --cov-report=term-missing:skip-covered -rP -vv -s --ignore=tests/tests_visual_result_generation",
             "group": {
-                "kind": "test",
+                "kind": "build",
                 "isDefault": true
             },
             "presentation": {
